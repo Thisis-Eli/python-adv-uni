@@ -36,7 +36,6 @@ class Fetcher :
         TOP_STUDENTS.append(B)
         continue
      return tuple(TOP_STUDENTS)
-     # It should NOT add 'Ali-Nouri' to the list. (o_O)
 
   def mean (self):
     population=len(self.__students)
