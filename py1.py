@@ -29,10 +29,14 @@ class Fetcher :
      for students in self.__students :
       if students["score"]>=maximum_score :
        maximum_score=students["score"]
-       B=students["name"] + "-" + students["last_name"]
-       TOP_STUDENTS.append(B)
        continue
+     for students in self.__students :
+      if students["score"]==maximum_score :
+        B=students["name"] + "-" + students["last_name"]
+        TOP_STUDENTS.append(B)
+        continue
      return tuple(TOP_STUDENTS)
+     # It should NOT add 'Ali-Nouri' to the list. (o_O)
 
   def mean (self):
     population=len(self.__students)
